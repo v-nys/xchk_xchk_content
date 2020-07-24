@@ -1,0 +1,26 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% block course_content %}
+<p>Ik heb xchk geschreven om een aantal problemen het hoofd te bieden:
+  <ul>
+    <li>Studenten schatten hun beheersingsniveau van het materiaal fout in.</li>
+    <li>Studenten weten niet hoe ze het materiaal moeten benaderen.</li>
+    <li>Lectoren hebben niet de tijd om elke student constante feedback te geven.</li>
+    <li>Bestaand materiaal bevat soms impliciete assumpties over voorkennis.</li>
+    <li>Er ontstaat makkelijk ontdubbeling van materiaal over cursussen heen.</li>
+  </ul>
+<p>
+
+<p>
+xchk lost deze problemen (hopelijk) op door te vertrekken van volgende principes:
+  <ul>
+    <li>Kennis is niet zuiver lineair gestructureerd. Eens je A kent, kan je misschien B <em>of</em> C gaan bestuderen. Omgekeerd, voor je D kan bestuderen, moet je misschien B <em>en</em> C onder de knie hebben.</li>
+    <li>Weten zonder te kunnen is niet weten.</li>
+  </ul>
+</p>
+{% endblock %}
+
+{% block assignment %}
+<h3>Multiple choice opdracht</h3>
+{{ custom_data.mc | mc_2_ul }}
+{% endblock %}
